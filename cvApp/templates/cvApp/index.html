@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+{% load static %}
+{% load i18n %}
+
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Francisco CV</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'cvApp/css/star-rating.css'%}">
+    <link rel="stylesheet" href="{% static 'cvApp/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'cvApp/css/alertify.min.css' %}">
+    <link rel="stylesheet" href="{% static 'cvApp/css/themes/default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'cvApp/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'cvApp/css/map.css' %}">
+    <link rel="stylesheet" href="{% static 'cvApp/css/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'cvApp/css/terminal.css' %}">
+
+
+    <noscript>
+      <style type="text/css">
+        [data-aos] {
+            opacity: 1 !important;
+            transform: translate(0) scale(1) !important;
+        }
+      </style>
+    </noscript>
+  </head>
+  <body id="top" class="minimized">
+    <header>
+      <div class="profile-page sidebar-collapse">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-transparent bg-primary" color-on-scroll="400">
+          <div class="container">
+            <div class="navbar-translate"><a class="navbar-brand" href="#" rel="tooltip">Francisco CV</a>
+              <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-bar bar1"></span><span class="navbar-toggler-bar bar2"></span><span class="navbar-toggler-bar bar3"></span></button>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end" id="navigation">
+              <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#about">{% trans "About" %}</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#skill">{% trans "Skills" %}</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#experience">{% trans "Experience" %}</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#contact">{% trans "Contact" %}</a></li>
+                {% get_current_language as CURRENT_LANGUAGE %}
+                {% get_available_languages as AVAILABLE_LANGUAGES %}
+                {% get_language_info_list for AVAILABLE_LANGUAGES as languages %}
+                    {% for language in languages %}
+                      <li class="nav-item">
+                        <a class="nav-link smooth-scroll" href="/{{ language.code }}/"
+                          {% if language.code == CURRENT_LANGUAGE %} class="active"{% endif %}>
+                          {{ language.name_local }}
+                        </a>
+                      </li>
+                    {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+      <div id="MainContainer">
+
+    <div class="page-content">
+      <div>
+<div class="profile-page">
+  <div class="wrapper">
+    <div class="page-header page-header-small" filter-color="green">
+      <div class="page-header-image" data-parallax="true" style="background-image: url('{% static 'cvApp/images/coding-background.png' %}')"></div>
+      <div class="container">
+        <div class="content-center">
+          <div class="cc-profile-image"><a href="#"><img src="{% static 'cvApp/images/pic01.jpg' %}" alt="Image"/></a></div>
+          <div class="h2 title">Francisco Seeber</div>
+          <p class="category text-white">{% trans ".NET Developer / Python Developer / Freelancer" %}</p>
+<!--          <a class="btn btn-primary smooth-scroll mr-2" href="#contact" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Hire Me</a>-->
+<!--          <a class="btn btn-primary" href="#" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Download CV</a>-->
+        </div>
+      </div>
+      <div class="section">
+        <div class="container">
+          <div class="button-container">
+            <a class="btn btn-default btn-round btn-lg btn-icon" target="_blank" href="https://www.linkedin.com/in/francisco-seeber/" rel="tooltip" title="Follow me on LinkedIn"><i class="fa fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="about">
+  <div class="container">
+    <div class="card" data-aos="fade-up" data-aos-offset="10">
+      <div class="row">
+        <div class="col-lg-6 col-md-12">
+          <div class="card-body">
+            <div class="h4 mt-0 title">{% trans "About" %}</div>
+            <p>{% trans "Hello! My name is Francisco Seeber. I have been a programmer for more than 7 years. I am looking to work in companies where I can continue to expand my knowledge, work with new technologies and have opportunities to grow." %}</p>
+            <p>{% trans "I am interested in a wide range of technologies, and I like challenges that require research tasks. Constantly learning." %}</p>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-12">
+          <div class="card-body">
+            <div class="h4 mt-0 title">{% trans "Basic Information" %}</div>
+            <div class="row">
+              <div class="col-sm-4"><strong class="text-uppercase">{% trans "Age:" %}</strong></div>
+              <div class="col-sm-8" id="myAge"></div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-sm-4"><strong class="text-uppercase">Email:</strong></div>
+              <div class="col-sm-8"><a href="mailto:franciscoseeberl@gmail.com">franciscoseeberl@gmail.com</a></div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-sm-4"><strong class="text-uppercase">{% trans "Phone:" %}</strong></div>
+              <div class="col-sm-8"><a href="tel:+5491164088404">+54 9 1164088404</a></div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-sm-4"><strong class="text-uppercase">{% trans "Country:" %}</strong></div>
+              <div class="col-sm-8">Argentina</div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-sm-4"><strong class="text-uppercase">{% trans "City:" %}</strong></div>
+              <div class="col-sm-8">Buenos Aires</div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-sm-4"><strong class="text-uppercase">{% trans "Languages:" %}</strong></div>
+              <div class="col-sm-8">Español, English</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section" id="skill">
+  <div class="container">
+    <div class="h4 text-center mb-4 title">{% trans "Professional Skills" %}</div>
+      <!-- Languages and Tools -->
+      {% include 'skills_and_tools.html' %}
+  </div>
+</div>
+<div class="section" id="experience">
+  <div class="container cc-experience">
+    <div class="h4 text-center mb-4 title">{% trans "Work Experience" %}</div>
+    <div class="card">
+      <div class="row">
+        <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body cc-experience-header">
+            <p>{% trans "March 2020" %} - {% trans "Present" %}</p>
+            <img width="60%" src="{% static 'cvApp/images/upwork.png' %}" alt="" />
+            <div class="h7">Upwork Inc</div>
+          </div>
+        </div>
+        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body">
+            <div class="h5">{% trans "Python Developer (Freelancer)" %}</div>
+            <p>{% trans "On the platform I have achieved the title" %} <img id="top-rated" src="{% static 'cvApp/images/toprated.png' %}"> {% trans "(Category awarded to the top 10% of Freelancers) as a Python developer. I have had the opportunity to interact with clients from all over the world (United States, Australia, England, Ireland, Canada, among others). I have had great experiences, not only in IT, but also in all aspects that involve working remotely with clients abroad, and organizing large-scale projects, communication, delivery and application support." %}</p>
+            <p>Total projects completed: <b>{{ total_reviews }}</b> <a class="smooth-scroll" href="#reference">(What my clients think)</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="card">
+      <div class="row">
+        <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body cc-experience-header">
+            <p>{% trans "April 2021" %} - {% trans "Present" %}</p>
+            <img width="60%" src="{% static 'cvApp/images/bancor.png' %}" alt="" />
+            <div class="h7">Banco de Córdoba</div>
+          </div>
+        </div>
+        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body">
+            <div class="h5">.NET Developer</div>
+            <p>
+              {% trans "- Development of web applications for the intranet" %}<br>
+              {% trans "- Development of console applications to automate processes" %}<br>
+              {% trans "- Implementing backend components using LINQ, Entity Framework Model for the Data Access Layer" %}<br>
+              {% trans "- Involved in Database design, writing Stored Procedures, Functions, Views and Triggers" %}<br>
+              {% trans "- Involved in Software maintenance and bug fixing on multiple applications" %}<br>
+              {% trans "- Software documentation" %}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="row">
+        <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body cc-experience-header">
+            <p>{% trans "November 2018" %} - {% trans "March 2020" %}</p>
+            <img width="40%" src="{% static 'cvApp/images/gsk.png' %}" alt="" />
+            <div class="h7">GlaxoSmithKline</div>
+          </div>
+        </div>
+        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body">
+            <div class="h5">IT Intern</div>
+              <p>
+                {% trans "- Research of tools and new innovation technologies to be applied at work." %}<br>
+                {% trans "- Software development for GSK's intranet to simplify tasks and save company time." %}<br>
+                {% trans "- I was given the opportunity to manage the IT team of a project with GSK Uruguay for the launch of the website: " %}<a href="https://uruguaycontralameningitis.com.uy/" target="_blank">UruguayContraLaMeningitis</a><br>
+                {% trans "- Working together with other areas to automate processes." %}<br>
+                {% trans "- Participation in brainstorming meetings for internal events with the participation of representatives from Google, Facebook, among others." %}
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="reference">
+  <div class="container cc-reference">
+    <div class="h4 mb-4 text-center title">{% trans "References" %}</div>
+    <div class="card card-body"  data-aos="fade-up" data-aos-anchor-placement="top-bottom" id="globeWrapper">
+        <div id="globeContainer" style="text-align: -webkit-center;">
+          <div id="globeViz"></div>
+        </div>
+        <div id="globeData" style="width: 49%">
+          <h1 id="tableTitle"></h1>
+          <table id="globeTable"></table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section" id="contact">
+  <div class="cc-contact-information" style="background-image: url('{% static 'cvApp/images/graphic-design-1.jpg' %}'); background-position: center; background-attachment: fixed">
+    <div class="container">
+      <div class="cc-contact">
+        <div class="row">
+          <div class="col-md-9">
+            <div class="card mb-0" data-aos="zoom-in">
+              <div class="h4 text-center title">{% trans "Contact" %}</div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="card-body">
+                    <form id="emailForm" method="POST">{% csrf_token %}
+                      <div class="p pb-3"><strong>{% trans "Feel free to contact me" %}</strong></div>
+                      <div class="row mb-3">
+                        <div class="col">
+                          <div class="input-group"><span class="input-group-addon"><i class="fa fa-user-circle"></i></span>
+                            <input class="form-control" type="text" name="Name" placeholder="{% trans 'Phone:' %}" required="required"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <div class="col">
+                          <div class="input-group"><span class="input-group-addon"><i class="fa fa-file-text"></i></span>
+                            <input class="form-control" type="text" name="Subject" placeholder="{% trans 'Subject:' %}" required="required"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <div class="col">
+                          <div class="input-group"><span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                            <input class="form-control" type="email" name="MailFrom" placeholder="Email" required="required"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <div class="col">
+                          <div class="form-group">
+                            <textarea class="form-control" name="Message" placeholder="{% trans 'Your message:' %}" required="required"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <button class="btn btn-primary" type="submit">{% trans "Send" %}</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card-body">
+                    <p class="mb-0"><strong>{% trans "Phone:" %}</strong></p>
+                    <a href="tel:+5491164088404">+54 9 1164088404</a>
+                    <p class="mb-0"><strong>Email</strong></p>
+                    <a href="mailto:franciscoseeberl@gmail.com">franciscoseeberl@gmail.com</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></div></div></body>
+    <footer class="footer">
+      <div class="h4 title text-center">Francisco Seeber</div>
+    </footer>
+
+    <div id="myModal" class="Modal">
+      <div class="window" id="terminal">
+          <!-- Terminal Bar -->
+          <section id="terminal__bar">
+            <div class="window-controls" id="bar__buttons">
+              <button class="bar__button close" id="bar__button--exit">&#10005;</button>
+              <button class="bar__button minimize">&#9472;</button>
+              <button class="bar__button maximize">&#9723;</button>
+            </div>
+            <div id="terminal-title"></div>
+          </section>
+          <!-- Terminal Body -->
+          <section class="window-content" id="terminal__body">
+            <div id="terminal__prompt--reviewtext">
+              <span id="terminal-description" class="terminal__prompt--text"></span>
+            </div>
+            <div id="terminal__prompt--clienttext">
+              <span id="terminal-client" class="terminal__prompt--text"></span>
+            </div>
+           <div id="terminal__prompt--allscores">
+            <table id="terminal__prompt--scores">
+              <tr>
+                <td>Skills: <span class="Stars" id="score-skill" style="--rating: 5;"></span></td>
+                <td>Quality: <span class="Stars" id="score-quality" style="--rating: 5;"></span></td>
+                <td>Availability: <span class="Stars" id="score-availability" style="--rating: 5;"></span></td>
+              </tr>
+              <tr>
+                <td>Deeadlines: <span class="Stars" id="score-deeadlines" style="--rating: 5;"></span></td>
+                <td>Communication: <span class="Stars" id="score-communication" style="--rating: 5;"></span></td>
+                <td>Cooperation: <span class="Stars" id="score-cooperation" style="--rating: 5;"></span></td>
+              </tr>
+            </table>
+
+            <div id="terminal__prompt--averagescore">
+              <div id="terminal__prompt--average">Average score: <span class="Stars" style="--rating: 5;"></span></div>
+            </div>
+          </div>
+          </section>
+      </div>
+    </div>
+    <script src="//unpkg.com/d3"></script>
+    <script src="//unpkg.com/globe.gl"></script>
+
+    <script>
+      function ShowMapTable(poly){
+        $.ajax({
+          type: 'GET',
+          url: '/api/reviews/',
+          data: {country: poly.properties.wb_a2},
+          success: function(response){
+            let reviewData = JSON.parse(response.data);
+            table = document.getElementById('globeTable');
+            tableTitle = document.getElementById('tableTitle');
+            tableTitle.innerHTML  = poly.properties.name_long;
+            table.innerHTML = '';
+            var row = table.insertRow(0);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            cell1.innerHTML = "<h6>{% trans "Client Name" %}</h6>";
+            cell2.innerHTML = "<h6>{% trans "Average Score" %}</h6>";
+            for (let rev in reviewData) {
+              var row = table.insertRow(parseInt(rev)+1);
+              var cell1 = row.insertCell(0);
+              var cell2 = row.insertCell(1);
+              var cell3 = row.insertCell(2);
+              cell1.innerHTML = "<div>" + reviewData[rev].fields.client_name + "</div>";
+              cell2.innerHTML = '<span class="Stars" style="--rating: ' + reviewData[rev].fields.average_score + ';"></span> (' + reviewData[rev].fields.average_score + "/5)";
+              cell3.innerHTML = '<a href="#" onclick="maximize(' + reviewData[rev].pk + ');event.preventDefault();">{% trans "View Details" %}</a>'
+            }
+          },
+          error: function(){
+            console.log(error);
+          }
+        });
+      }
+
+
+      const colorScale = d3.scaleSequentialSqrt(d3.interpolateOrRd);
+      const getVal = feat => Math.max(0.01, feat.properties.count);
+
+      function stopWorld (world, hovereD) {
+        world.controls().autoRotate = !hovereD;
+        world
+            .polygonAltitude(d => d === hovereD ? 0.09 : 0.06)
+            .polygonCapColor(d => d === hovereD ? 'green' : colorScale(getVal(d)));
+      }
+
+      fetch('/api/map/').then(res => res.json()).then(countries =>
+      {
+        const maxVal = Math.max(...countries.features.map(getVal));
+
+        colorScale.domain([0, maxVal]);
+        const world = Globe()
+          .globeImageUrl('{% static 'cvApp/images/world-blue.jpg' %}')
+          .lineHoverPrecision(0)
+          .width(document.getElementById("globeContainer").offsetWidth)
+          .height([window.innerHeight/1.5])
+          .backgroundColor("rgba(0,0,0,0)")
+          .polygonsData(countries.features.filter(d => d.properties.count > 0))
+          .polygonAltitude(0.02)
+          .polygonCapColor(feat => colorScale(getVal(feat)))
+          .polygonSideColor(() => 'rgba(0, 100, 0, 0.15)')
+          .polygonStrokeColor(() => '#111')
+          .polygonLabel(({ properties: d }) => `
+            <div class="info-board"><b style="color:green;">${d.admin} (${d.iso_a2}):</b> <br />
+            Reviews: <i>${d.count}</i></div>
+          `)
+          .onPolygonHover(hoverD => stopWorld(world, hoverD)
+          )
+          .onPolygonClick(ShowMapTable)
+          .polygonsTransitionDuration(300)
+        (document.getElementById('globeViz'))
+        world.controls().autoRotate = true;
+        world.controls().enableZoom = false;
+        world.camera().zoom = 1.5;
+
+        window.addEventListener('resize', (event) => {
+          world.width(document.getElementById("globeContainer").offsetWidth)
+          world.height([event.target.innerHeight/1.5])
+        });
+      });
+    </script>
+
+    <script src="{% static 'cvApp/js/core/jquery.3.2.1.min.js' %}"></script>
+    <script src="{% static 'cvApp/js/core/popper.min.js' %}"></script>
+    <script src="{% static 'cvApp/js/core/bootstrap.min.js' %}"></script>
+    <script src="{% static 'cvApp/js/now-ui-kit.js' %}"></script>
+    <script src="{% static 'cvApp/js/aos.js' %}"></script>
+    <script src="{% static 'cvApp/js/alertify.min.js' %}"></script>
+    <script src="{% static 'cvApp/scripts/main.js' %}"></script>
+    <script src="{% static 'cvApp/js/terminal.js' %}"></script>
+    <script src="{% static 'cvApp/js/email-me.js' %}"></script>
+
+
+</html>

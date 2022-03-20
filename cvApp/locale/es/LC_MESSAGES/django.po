@@ -1,0 +1,242 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-20 05:43-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\templates\cvApp\index.html:43 .\templates\cvApp\index.html:98
+msgid "About"
+msgstr "Sobre mí"
+
+#: .\templates\cvApp\index.html:44
+msgid "Skills"
+msgstr "Habilidades"
+
+#: .\templates\cvApp\index.html:45
+msgid "Experience"
+msgstr "Experiencias"
+
+#: .\templates\cvApp\index.html:46 .\templates\cvApp\index.html:236
+msgid "Contact"
+msgstr "Contacto"
+
+#: .\templates\cvApp\index.html:76
+msgid ".NET Developer / Python Developer / Freelancer"
+msgstr "Desarrollador .NET / Desarrollador Python / Freelancer"
+
+#: .\templates\cvApp\index.html:99
+msgid ""
+"Hello! My name is Francisco Seeber. I have been a programmer for more than 7 "
+"years. I am looking to work in companies where I can continue to expand my "
+"knowledge, work with new technologies and have opportunities to grow."
+msgstr ""
+"Hola! Mi nombre es Francisco Seeber. Soy un programador hace ya más de 7 "
+"años. Busco trabajar en empresas donde pueda seguir ampliando mis "
+"conocimientos, trabajar con nuevas tecnologías y tenga oportunidades de "
+"crecer."
+
+#: .\templates\cvApp\index.html:100
+msgid ""
+"I am interested in a wide range of technologies, and I like challenges that "
+"require research tasks. Constantly learning."
+msgstr ""
+"Me interesan un amplio rango de tecnologías, y me gustan los desafíos que "
+"requieran tareas de investigación. Constantemente aprendiendo."
+
+#: .\templates\cvApp\index.html:105
+msgid "Basic Information"
+msgstr "Información Básica"
+
+#: .\templates\cvApp\index.html:107
+msgid "Age:"
+msgstr "Edad:"
+
+#: .\templates\cvApp\index.html:115 .\templates\cvApp\index.html:245
+#: .\templates\cvApp\index.html:280
+msgid "Phone:"
+msgstr "Teléfono:"
+
+#: .\templates\cvApp\index.html:119
+msgid "Country:"
+msgstr "País:"
+
+#: .\templates\cvApp\index.html:123
+msgid "City:"
+msgstr "Ciudad:"
+
+#: .\templates\cvApp\index.html:127
+msgid "Languages:"
+msgstr "Idiomas:"
+
+#: .\templates\cvApp\index.html:138
+msgid "Professional Skills"
+msgstr "Habilidades Profesionales"
+
+#: .\templates\cvApp\index.html:145
+msgid "Work Experience"
+msgstr "Experiencias"
+
+#: .\templates\cvApp\index.html:150 .\templates\cvApp\index.html:192
+msgid "March 2020"
+msgstr "Marzo 2020"
+
+#: .\templates\cvApp\index.html:150 .\templates\cvApp\index.html:168
+msgid "Present"
+msgstr "Actualidad"
+
+#: .\templates\cvApp\index.html:157
+msgid "Python Developer (Freelancer)"
+msgstr "Desarrollador Python (Freelancer)"
+
+#: .\templates\cvApp\index.html:158
+msgid "On the platform I have achieved the title"
+msgstr "En la plataforma he obtenido el título"
+
+#: .\templates\cvApp\index.html:158
+#, fuzzy, python-format
+#| msgid ""
+#| "(Category awarded to the top 10%% of Freelancers) as a Python developer. "
+#| "I have had the opportunity to interact with clients from all over the "
+#| "world (United States, Australia, England, Ireland, Canada, among others). "
+#| "I have had great experiences, not only in IT, but also in all aspects "
+#| "that involve working remotely with clients abroad, and organizing large-"
+#| "scale projects, communication, delivery and application support."
+msgid ""
+"(Category awarded to the top 10%% of Freelancers) as a Python developer. I "
+"have had the opportunity to interact with clients from all over the world "
+"(United States, Australia, England, Ireland, Canada, among others). I have "
+"had great experiences, not only in IT, but also in all aspects that involve "
+"working remotely with clients abroad, and organizing large-scale projects, "
+"communication, delivery and application support."
+msgstr ""
+"(Categoría otorgada al top 10% de los Freelancers) como desarrollador "
+"Python. He tenido la oportunidad de interactuar con clientes de todas partes "
+"del mundo (Estados Unidos, Australia, Inglaterra, Irlanda, Canada, entre "
+"otros). He tenido grandes experiencias, no solo en TI, sino también en todos "
+"los aspectos que implican trabajar de forma remota con clientes en el "
+"exterior, y organizar proyectos de grandes escalas, comunicación, entrega y "
+"soporte de aplicaciones."
+
+#: .\templates\cvApp\index.html:168
+msgid "April 2021"
+msgstr "Abril 2021"
+
+#: .\templates\cvApp\index.html:177
+msgid "- Development of web applications for the intranet"
+msgstr "- Desarrollo de aplicaciones web para la intranet"
+
+#: .\templates\cvApp\index.html:178
+msgid "- Development of console applications to automate processes"
+msgstr "- Desarrollo de aplicaciones de consola para automatizar procesos"
+
+#: .\templates\cvApp\index.html:179
+msgid ""
+"- Implementing backend components using LINQ, Entity Framework Model for the "
+"Data Access Layer"
+msgstr ""
+"- Implementación de componentes de backend usando LINQ, Entity Framework "
+"para la capa de acceso a datos"
+
+#: .\templates\cvApp\index.html:180
+msgid ""
+"- Involved in Database design, writing Stored Procedures, Functions, Views "
+"and Triggers"
+msgstr ""
+"- Involucrado en el diseño de Bases de datos, escribiendo Stored Procedures, "
+"Functions, Views y Triggers"
+
+#: .\templates\cvApp\index.html:181
+msgid ""
+"- Involved in Software maintenance and bug fixing on multiple applications"
+msgstr ""
+"- Involucrado en el mantenimiento de Software y arreglo de bugs en multiples "
+"aplicaciones"
+
+#: .\templates\cvApp\index.html:182
+msgid "- Software documentation"
+msgstr "- Documentación de Software"
+
+#: .\templates\cvApp\index.html:192
+msgid "November 2018"
+msgstr "Noviembre 2018"
+
+#: .\templates\cvApp\index.html:201
+msgid ""
+"- Research of tools and new innovation technologies to be applied at work."
+msgstr ""
+"- Búsqueda de herramientas y nuevas tecnologías de innovación para aplicar "
+"en el trabajo."
+
+#: .\templates\cvApp\index.html:202
+msgid ""
+"- Software development for GSK's intranet to simplify tasks and save company "
+"time."
+msgstr ""
+"- Desarrollo de Software para empleados de GSK con el fin de simplificar "
+"tareas y ahorrar tiempos."
+
+#: .\templates\cvApp\index.html:203
+msgid ""
+"- I was given the opportunity to manage the IT team of a project with GSK "
+"Uruguay for the launch of the website: "
+msgstr ""
+"- Se me dio la oportunidad de gestionar del lado de IT un proyecto con GSK "
+"Uruguay para la puesta en marcha del sitio web: "
+
+#: .\templates\cvApp\index.html:204
+msgid "- Working together with other areas to automate processes."
+msgstr "- Trabajar en conjunto con otras áreas para automatizar procesos."
+
+#: .\templates\cvApp\index.html:205
+msgid ""
+"- Participation in brainstorming meetings for internal events with the "
+"participation of representatives from Google, Facebook, among others."
+msgstr ""
+"- Participación en reuniones de puesta de ideas para eventos internos donde "
+"participaron representantes de las empresas Google, Facebook, entre otras"
+
+#: .\templates\cvApp\index.html:216
+msgid "References"
+msgstr "Referencias"
+
+#: .\templates\cvApp\index.html:241
+msgid "Feel free to contact me"
+msgstr "Ponte en contacto conmigo"
+
+#: .\templates\cvApp\index.html:252
+msgid "Subject:"
+msgstr "Asunto:"
+
+#: .\templates\cvApp\index.html:266
+msgid "Your message:"
+msgstr "Tu Mensaje:"
+
+#: .\templates\cvApp\index.html:272
+msgid "Send"
+msgstr "Enviar"
+
+#: .\templates\cvApp\index.html:356
+msgid "Client Name"
+msgstr "Nombre del cliente"
+
+#: .\templates\cvApp\index.html:357
+msgid "Average Score"
+msgstr "Puntaje Promedio"
+
+#: .\templates\cvApp\index.html:365
+msgid "View Details"
+msgstr "Ver detalles"
