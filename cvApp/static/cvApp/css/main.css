@@ -1123,7 +1123,7 @@
   .navbar .navbar-nav > a.btn.dropdown-toggle:focus,
   .show >
   .navbar .navbar-nav > a.btn.dropdown-toggle:hover {
-    background-color: #979797;
+    background-color: #fff;
     color: #FFFFFF;
     box-shadow: none; }
   .btn:hover,
