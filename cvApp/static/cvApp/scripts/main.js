@@ -5,6 +5,12 @@ $(document).ready(function() {
   });
 });
 
+$(".cc-profile-image").on("click", function(){
+    $(this).addClass("imageRot").one('webkitAnimationEnd mozAnimationEnd oAnimationEnd msAnimationEnd animationend', function () {
+        $(this).removeClass("imageRot");
+    });
+});
+
 // Smooth scroll for links with hashes
 $('a.smooth-scroll').click(function(event) {
   // On-page links

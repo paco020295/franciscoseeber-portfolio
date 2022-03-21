@@ -58,6 +58,7 @@
     color: #a7a4a4;
     white-space: nowrap;
     overflow-x: hidden;
+    font-size: smaller;
 }
 
 #terminal__body {

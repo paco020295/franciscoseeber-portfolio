@@ -1,6 +1,6 @@
 .idea
 /venv/
 .env
-/cv_main/settings_local.py
-/cvApiReviews/migrations/
-/cvApp/migrations/
+migrations/
+__pycache__/
+settings_local.py
