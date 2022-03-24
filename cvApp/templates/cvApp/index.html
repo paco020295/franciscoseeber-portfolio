@@ -128,7 +128,7 @@
             </div>
             <div class="row mt-3">
               <div class="col-sm-4"><strong class="text-uppercase">{% trans "City:" %}</strong></div>
-              <div class="col-sm-8">Buenos Aires</div>
+              <div class="col-sm-8">Ciudad de Buenos Aires</div>
             </div>
             <div class="row mt-3">
               <div class="col-sm-4"><strong class="text-uppercase">{% trans "Languages:" %}</strong></div>
@@ -163,7 +163,7 @@
           <div class="card-body">
             <div class="h5">{% trans "Python Developer (Freelancer)" %}</div>
             <p>{% trans "On the platform I have achieved the title" %} <img id="top-rated" src="{% static 'cvApp/images/toprated.png' %}"> {% trans "(Category awarded to the top 10% of Freelancers) as a Python developer. I have had the opportunity to interact with clients from all over the world (United States, Australia, England, Ireland, Canada, among others). I have had great experiences, not only in IT, but also in all aspects that involve working remotely with clients abroad, and organizing large-scale projects, communication, delivery and application support." %}</p>
-            <p>Total projects completed: <b>{{ total_reviews }}</b> <a class="smooth-scroll" href="#reference">(What my clients think)</a></p>
+            <p>{% trans "Total projects completed: " %}<b>{{ total_reviews }}</b> <a class="smooth-scroll" href="#reference">{% trans "(What my clients think)" %}</a></p>
           </div>
         </div>
       </div>
@@ -224,7 +224,7 @@
     <div class="card card-body"  data-aos="fade-up" data-aos-anchor-placement="top-bottom" id="globeWrapper">
         <div id="globeContainer" style="text-align: -webkit-center;">
           <div id="globeViz"></div>
-          <div class="small" style="text-align: left;"><span>*Click the countries to see the reviews</span></div>
+          <div class="small" style="text-align: left;"><span>{% trans "*Click the countries to see the reviews" %}</span></div>
         </div>
         <div id="globeData" style="width: 49%">
           <h1 id="tableTitle"></h1>
